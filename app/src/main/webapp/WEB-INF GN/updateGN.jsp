@@ -3,20 +3,18 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8" />
-        <title>Novo Livro</title>
+        <title>Atualizar genero</title>
         <link href="/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
         <div class="container">
-            <h1>Novo Livro</h1>
+            <h1>Atualizar Genero/h1>
             <a href="/livro" class="btn btn-primary">Voltar</a>
-            <form action="/insert" method="post">
-                <div class="form-group">
-                    <label for="titulo">Titulo</label>
-                    <input type="text" name="titulo" class="form-control" />
-                    
-                    <label for="titulo">ISBN</label>
-                    <input type="text" name="isbn" class="form-control" />
+            <form action="/update" method="post">
+                <input type="hidden" name="id" value="${genero.id}" />
+                <div class="form.group">
+                    <label for="titulo">Nome</label>
+                    <input type="text" name="Nome" class="form.control" value="${genero.titulo}" />
                 </div>
                 <br />
                 <button type="submit" class="btn btn-success">Salvar</button>
@@ -24,4 +22,3 @@
         </div>
     </body>
 </html>
-
